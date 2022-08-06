@@ -1,0 +1,21 @@
+{
+    "name": "kaistaerk/ajax-flash-message-bundle",
+    "type": "symfony-bundle",
+    "description": "Handle ajax flash messages for symfony 5",
+    "keywords": ["Symfony", "ajax", "flash message", "flashbag"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kai Stärk",
+            "email": "kai@staerk.it",
+            "homepage": "https://www.staerk.it"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Ajax\\Bundle\\FlashMessageBundle\\": "" }
+    },
+    "require": {
+        "php": ">=7.4",
+        "symfony/framework-bundle": "5.*"
+    }
+}
