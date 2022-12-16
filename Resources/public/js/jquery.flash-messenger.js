@@ -23,7 +23,6 @@
         listenIncomingMessages: function() {
             $(document).ajaxComplete(function(event, xhr, settings) {
                 var data = $.parseJSON(xhr.responseText);
-                console.log(1);
 
                 if (data.messages) {
                     var messages = data.messages;
