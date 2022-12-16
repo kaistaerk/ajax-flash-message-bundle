@@ -1,23 +1,17 @@
 <?php
 namespace Ajax\Bundle\FlashMessageBundle\Services\Messenger;
 
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
-use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
-/**
- * response listener to ajax requests
- *
- * @author Kai Stärk <kai@staerk.it>
- */
 class Flash
 {
     protected $session;
 
-    public function __construct(Session $session)
+    public function __construct(RequestStack $requestStack)
     {
-        $this->session = $session;
+        $this->session = $requestStack->getSession();
     }
 
     public function onKernelResponse(ResponseEvent $event)
