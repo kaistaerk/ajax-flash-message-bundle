@@ -31,19 +31,19 @@
 
                     if (messages.error) {
                         for (i = 0; i < messages.error.length; i++) {
-                            methods.addError(messages.error[i].message);
+                            methods.addError(messages.error[i]);
                         }
                     }
 
                     if (messages.success) {
                         for (i = 0; i < messages.success.length; i++) {
-                            methods.addSuccess(messages.success[i].message);
+                            methods.addSuccess(messages.success[i]);
                         }
                     }
 
                     if (messages.info) {
                         for (i = 0; i < messages.info.length; i++) {
-                            methods.addInfo(messages.info[i].message);
+                            methods.addInfo(messages.info[i]);
                         }
                     }
                 }
@@ -87,10 +87,8 @@
             var flashMessageElt = $('<div></div>')
                     .hide()
                     .addClass('alert'+$cssClass)
-                    // .append(methods.getCloseButton())
                     .append($fontAwesome)
                     .append(message)
-                    // .append($('<div></div>').html(message))
                 ;
 
             return flashMessageElt;
