@@ -16,11 +16,8 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritDoc}
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('ajax_flash_message');
-        #$rootNode    = $treeBuilder->root('ajax_flash_message');
-
-        return $treeBuilder;
+        return new TreeBuilder('ajax_flash_message');
     }
 }
